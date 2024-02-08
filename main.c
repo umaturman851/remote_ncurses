@@ -9,25 +9,22 @@ int main ()
 	keypad(stdscr, true);
 	noecho();
 	curs_set(0);	
-	c = getch();
-       //mvprintw(11,11,"Hello, world!");
         getmaxyx(stdscr, rows, cols);
-
 	char map[rows][cols];
 	do
 	{
-		for(int yy = 0; yy <= rows; yy++)
+		for(int yy = 0; yy < rows; yy++)
 		{
-			for(int xx=0; xx <= cols; xx++)
+			for(int xx=0; xx < cols; xx++)
 			{
 				map[yy][xx] = '#';
 				mvaddch(yy,xx, '#');
 			}
 		}
 		
-		for(int yy = 11; yy <= rows/2; yy++)
+		for(int yy = 11; yy < rows/2; yy++)
 		{
-			for(int xx=11; xx <= cols/2; xx++)
+			for(int xx=11; xx < cols/2; xx++)
 			{
 				map[yy][xx] = ' ';
 				mvaddch(yy,xx, ' ');
